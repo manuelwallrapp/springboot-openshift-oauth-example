@@ -8,7 +8,7 @@ You can read more about registering OAuthClients in Openshift [here](https://doc
 
 # Springboot 3
 We built a simple Springboot 3 application to test the Authentication process and want to share this with you. 
-Of course the same you can to with Quarkus or any other framework.
+Of course the same you can do with Quarkus or any other framework.
 
 Sadly the Openshift OAuthClient doesn't bring a userinfo endpoint so we have to use the Openshift user endpoint to get the user information and patch it into the authentication process.
 
