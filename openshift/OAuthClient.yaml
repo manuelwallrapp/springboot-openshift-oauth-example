@@ -1,0 +1,8 @@
+apiVersion: oauth.openshift.io/v1
+grantMethod: auto
+kind: OAuthClient
+metadata:
+  name: springboot-oauth2-client
+redirectURIs:
+  - http://localhost:8080/login/oauth2/code/openshift
+secret: <defineYourOwnPasswordHere>

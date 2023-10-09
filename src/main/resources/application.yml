@@ -1,0 +1,22 @@
+openshift:
+  api-url: ${OPENSHIFT_API_URL}
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          openshift:
+            clientId: springboot-oauth2-client
+            clientSecret: ${OPENSHIFT_OAUTH_CLIENT_SECRET}
+            clientName: springboot-oauth2-client
+            authorizationGrantType: authorization_code
+            redirectUri: http://localhost:8080/login/oauth2/code/openshift
+        provider:
+          openshift:
+            authorization-uri: ${OPENSHIFT_OAUTH_URL}/oauth/authorize
+            token-uri: ${OPENSHIFT_OAUTH_URL}/oauth/token
+logging:
+  level:
+    org:
+      springframework:
+        security: INFO # DEBUG or TRACE if you need some more infos in case you have trouble in the authentication process
